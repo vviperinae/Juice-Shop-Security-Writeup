@@ -1,6 +1,6 @@
 <div align="center">
 
-[ 🏠 Home ](README.md) ⋆ [ 🛡️ Findings ](findings/README.md) ⋆ [ 🏆 Challenges ](challenges-solved/README.md)
+[🏠 Home](README.md) ⋆ [🛡️ Findings](findings/README.md) ⋆ [🏆 Challenges](challenges-solved/README.md)
 
 <br>
 

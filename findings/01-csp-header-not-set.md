@@ -1,6 +1,8 @@
 <div align="center">
 
-[ 🏠 Home ](../README.md) ⋆ [ 🛡️ Findings ](README.md) ⋆ [ 🏆 Challenges ](../challenges-solved/README.md)
+[ 🏠 Home ](../README.md)  ⋆ 
+[ 🛡️ Findings ](README.md) ⋆ 
+[ 🏆 Challenges ](../challenges-solved/README.md)
 
 </div>
 <br>
@@ -11,7 +13,6 @@
 ʚɞ **Severity:** Medium<br>
 ʚɞ **Endpoint:** Global / Multiple Endpoints<br>
 ʚɞ **Category:** Security Misconfiguration
-
 <br>
 
 ## ⑅ ‧₊˚ ↬ *Description & Exploitation*
@@ -31,7 +32,6 @@ Content-Length: 1045
 Looking at the returned headers, we can clearly see that the `Content-Security-Policy` (CSP) header is completely missing. 
 
 Without a strict CSP, the browser has no instructions on which dynamic resources are safe to load. If we manage to find an injection point later in the assessment, the lack of this header guarantees that the browser will blindly execute our malicious scripts, leaving the application highly vulnerable to Cross-Site Scripting (XSS).
-
 <br>
 
 ## ⑅ ‧₊˚ ↬ *Remediation*

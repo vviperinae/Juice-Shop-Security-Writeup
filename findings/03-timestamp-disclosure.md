@@ -1,7 +1,5 @@
-<div align="center">
-
-[ 🏠 Home ](../README.md) ⋆ [ 🛡️ Findings ](README.md) ⋆ [ 🏆 Challenges ](../challenges-solved/README.md)
-
+<div align="left">
+  <a href="./">↤ Back to Findings</a>
 </div>
 <br>
 
@@ -11,7 +9,6 @@
 ʚɞ **Severity:** Low<br>
 ʚɞ **Endpoint:** Various API Responses<br>
 ʚɞ **Category:** Information Exposure
-
 <br>
 
 ## ⑅ ‧₊˚ ↬ *Description & Exploitation*
@@ -34,7 +31,6 @@ Content-Type: application/json
 ```
 
 While not a direct vector for exploitation, leaking internal system time assists an attacker in the reconnaissance phase. It allows them to accurately fingerprint the backend server time, calculate server uptime, or potentially synchronize time-based attacks against pseudo-random number generators or cryptographic tokens.
-
 <br>
 
 ## ⑅ ‧₊˚ ↬ *Remediation*

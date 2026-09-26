@@ -1,5 +1,5 @@
 <div align="center">
-[← ⋆ Back to summary](../README.md)
+[ 🏠 Home ](../README.md)
 </div>
 <br>
 

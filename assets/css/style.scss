@@ -1,65 +1,93 @@
 ---
 ---
-@import "{{ site.theme }}";
-
-/* Custom Clean Retro UI (Dark Theme) */
+/* Custom Clean Retro UI (Independent Dark Theme) */
 
 body {
-  background-color: #0a0a0a; /* True dark background */
-  color: #d1d5db; /* Crisp gray text for readability */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; 
+  background-color: #0d0f14; /* Deep, clean dark background */
+  color: #e5e7eb; /* High-contrast light gray text for perfect readability */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 /* Sharp, blocky retro links */
 a {
   color: #DDA0DD; /* Purple links */
   text-decoration: none;
-  border-bottom: 1px solid #DDA0DD; /* Underline instead of floating text */
+  border-bottom: 1px solid #DDA0DD;
+  transition: all 0.2s ease-in-out;
 }
 
 a:hover {
-  background-color: #FFB6C1; /* High-contrast block highlight on hover */
-  color: #0a0a0a; 
+  background-color: #FFB6C1;
+  color: #0d0f14; /* Text turns dark when highlighted for readability */
   border-bottom: 1px solid #FFB6C1;
 }
 
 /* Retro Terminal Headers */
 h1, h2, h3, h4 {
-  color: #FFB6C1;
-  font-family: "Courier New", Consolas, monospace; /* Typewriter/Terminal font for headers */
-  border-bottom: 2px solid #222; /* Sharp, hard divider */
-  padding-bottom: 10px;
-  text-transform: uppercase; /* Classic retro feel */
+  color: #FFB6C1; /* Pink headers */
+  font-family: "Courier New", Consolas, monospace;
+  border-bottom: 2px solid #2d333b; /* Subtle structural divider */
+  padding-bottom: 8px;
+  margin-top: 2em;
+  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* Hard-edged Code Blocks */
+/* Hard-edged Code Blocks with High Contrast */
 code, pre {
-  background-color: #111;
-  color: #e6edf3;
-  border: 1px solid #444;
+  background-color: #161b22; /* Specific dark gray for code blocks */
+  color: #f0f6fc; /* Bright white/blue-ish text for high contrast code */
+  border: 1px solid #30363d;
   border-radius: 0px; 
-  padding: 12px;
   font-family: "Courier New", Consolas, monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  padding: 16px;
+  overflow-x: auto;
+}
+
+code {
+  padding: 2px 6px; /* Padding for inline code like `this` */
 }
 
 /* Tables */
-table th {
-  background-color: #111;
-  color: #FFB6C1;
-  border: 1px solid #444;
-}
-table td {
-  border: 1px solid #444;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
 }
 
-/* The Retro 'Window' Wrapper */
+table th, table td {
+  border: 1px solid #30363d;
+  padding: 12px;
+  text-align: left;
+}
+
+table th {
+  background-color: #161b22;
+  color: #FFB6C1;
+}
+
+/* The Central Window Wrapper */
 .wrapper {
-  max-width: 850px;
-  margin: 60px auto;
+  max-width: 800px; /* Keeps line lengths readable */
+  margin: 60px auto; /* Centers the whole block horizontally */
   padding: 40px;
-  background-color: #161616; /* Slightly lighter than background */
-  border: 2px solid #333; /* Hard border */
-  border-radius: 0px;
-  box-shadow: 10px 10px 0px #222; /* Hard block shadow (classic retro UI staple) */
+  background-color: #14171f; /* A shade lighter than the background */
+  border: 2px solid #30363d; 
+  border-radius: 0px; 
+  box-shadow: 10px 10px 0px #050608; /* Retro hard shadow */
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 850px) {
+  .wrapper {
+    margin: 20px;
+    padding: 20px;
+  }
 }

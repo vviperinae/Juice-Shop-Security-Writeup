@@ -1,34 +1,33 @@
+
+
+<div align="center">
+
 [← Back to summary](../README.md)
 
-# Finding 3: Timestamp Disclosure — Unix
+</div>
+<br>
 
-| Field | Detail |
-|---|---|
-| **Severity** | Low / Informational |
-| **Type** | DAST (black-box, found via OWASP ZAP passive scan) |
-| **OWASP Category** | A01:2021 - Broken Access Control (information exposure) |
-| **CWE** | CWE-200: Exposure of Sensitive Information |
+# ୨୧ Timestamp Disclosure ୨୧
 
-## Description
+## ⑅ ‧₊˚ ↬ *Overview*
+ʚɞ **Severity:** Low<br>
+ʚɞ **Endpoint:** Various API Responses<br>
+ʚɞ **Vulnerability Category:** Information Exposure<br>
 
-A Unix timestamp was identified in an application response. While a single timestamp is low-risk on its own, exposed timestamps can help an attacker infer server behavior, caching logic, or be chained with other information disclosures to build a fuller picture of the backend.
+<br>
 
-## Steps to Reproduce
+## ⑅ ‧₊˚ ↬ *Description*
+The application discloses internal system timestamps within its HTTP responses. While not a direct vulnerability, this information can assist an attacker in fingerprinting the backend system, mapping server uptime, or synchronizing time-based attacks against cryptographic tokens.
 
-1. [Fill in: which request/response ZAP flagged this in]
-2. [Fill in: locate the raw timestamp value in the response body/header]
+<br>
 
-## Evidence
+## ⑅ ‧₊˚ ↬ *Steps to Reproduce*
+⋈ 1. Browse the application while proxying traffic through OWASP ZAP.<br>
+⋈ 2. Run a passive scan on the captured traffic.<br>
+⋈ 3. Review the ZAP alerts for "Timestamp Disclosure".<br>
+⋈ 4. Observe that raw Unix timestamps are exposed in plain text within the JSON response bodies.<br>
 
-*(Insert screenshot of the flagged response with the timestamp highlighted)*
+<br>
 
-## Impact
-
-Low in isolation. Contributes to attacker reconnaissance when combined with other disclosures (server errors, verbose headers, etc.).
-
-## Remediation
-
-Avoid exposing raw internal timestamps in user-facing responses where not functionally necessary; use relative or formatted dates instead where display is required.
-
-## References
-- https://cwe.mitre.org/data/definitions/200.html
+## ⑅ ‧₊˚ ↬ *Remediation*
+Strip internal timestamps from API responses unless they are strictly required for front-end functionality. If time data is necessary, format it in a standard, generalized way.

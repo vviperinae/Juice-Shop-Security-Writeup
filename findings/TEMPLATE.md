@@ -1,26 +1,30 @@
-[← Back to summary](../README.md)
+<div align="center">
 
-# Finding N: [Vulnerability Name]
+[ 🏠 Home ](../README.md) ⋆ [ 🛡️ All Findings ](../README.md#findings) ⋆ [ 🏆 Challenges ](../README.md#findings)
 
-| Field | Detail |
-|---|---|
-| **Severity** | Critical / High / Medium / Low |
-| **Type** | DAST / Code Review |
-| **OWASP Category** | e.g. A03:2021 - Injection |
-| **CWE** | e.g. CWE-89 |
+</div>
+<br>
 
-## Description
+# ୨୧ [Vulnerability Name] ୨୧
 
-## Steps to Reproduce
+## ⑅ ‧₊˚ ↬ *Overview*
+ʚɞ **Severity:** [Low / Medium / High / Critical]<br>
+ʚɞ **Endpoint:** `[Target URL]`<br>
+ʚɞ **Vulnerability Category:** [e.g., OWASP Top 10 category]<br>
 
-1.
-2.
-3.
+<br>
 
-## Evidence
+## ⑅ ‧₊˚ ↬ *Description*
+[Provide a concise explanation of the vulnerability and why it poses a security risk to the application.]
 
-## Impact
+<br>
 
-## Remediation
+## ⑅ ‧₊˚ ↬ *Steps to Reproduce*
+⋈ 1. Navigate to `[URL]`.<br>
+⋈ 2. [Action step, e.g., intercept the request using OWASP ZAP].<br>
+⋈ 3. Observe that [describe the vulnerable response or behavior].<br>
 
-## References
+<br>
+
+## ⑅ ‧₊˚ ↬ *Remediation*
+[Provide developer-centric advice on how to patch the vulnerability, such as configuration changes or code snippets.]

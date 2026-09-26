@@ -1,6 +1,6 @@
 <div align="center">
 
-[ 🏠 Home ](#) ⋆ [ 🛡️ Findings ](#findings) ⋆ [ 🏆 Challenges ](#findings)
+[ 🏠 Home ](README.md) ⋆ [ 🛡️ Findings ](findings/README.md) ⋆ [ 🏆 Challenges ](challenges-solved/README.md)
 
 <br>
 
@@ -25,13 +25,10 @@ A comprehensive black-box Dynamic Application Security Testing (DAST) assessment
 ʚɞ **Target Application:** OWASP Juice Shop (a deliberately vulnerable modern web application).<br>
 ʚɞ **Methodology:** Black-box DAST methodology focusing on the OWASP Top 10 vulnerability categories.<br>
 ʚɞ **Primary Tool:** OWASP ZAP (Zed Attack Proxy) for active and passive vulnerability scanning.<br>
-ʚɞ **Deliverables:** Structured markdown reports detailing reproduction steps, impact analysis, and remediation guidance.<br>
+ʚɞ **Deliverables:** Structured markdown reports detailing reproduction steps, impact analysis, and remediation guidance.
 
 <br>
 
-<a id="findings"></a>
-## ⑅ ‧₊˚ ↬ *Documented Findings*
-⋈ **Vulnerability 01:** [Content Security Policy (CSP) Header Not Set](findings/01-csp-header-not-set.md)<br>
-⋈ **Vulnerability 02:** [Cross Domain Misconfiguration](findings/02-cross-domain-misconfiguration.md)<br>
-⋈ **Vulnerability 03:** [Timestamp Disclosure](findings/03-timestamp-disclosure.md)<br>
-⋈ **Exploitation:** [Score Board Access Control Bypass](challenges-solved/score-board.md)<br>
+## ⑅ ‧₊˚ ↬ *Explore the Assessment*
+⋈ **[ View Vulnerability Findings ➔ ](findings/README.md)** <br>
+⋈ **[ View Solved Challenges ➔ ](challenges-solved/README.md)**

@@ -1,9 +1,5 @@
-<div align="center">
-
-[ 🏠 Home ](../README.md)  ⋆ 
-[ 🛡️ Findings ](README.md) ⋆ 
-[ 🏆 Challenges ](../challenges-solved/README.md)
-
+<div align="left">
+  <a href="./">↤ Back to Findings</a>
 </div>
 <br>
 

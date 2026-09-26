@@ -1,17 +1,14 @@
-<div align="center">
-
-[ 🏠 Home ](../README.md) ⋆ [ 🛡️ Findings ](../findings/README.md) ⋆ [ 🏆 Challenges ](README.md)
-
+<div align="left">
+  <a href="./">↤ Back to Challenges</a>
 </div>
-<br>
 
 # ୨୧ Score Board Access Control Bypass ୨୧
+<br>
 
 ## ⑅ ‧₊˚ ↬ *Overview*
 ʚɞ **Difficulty:** 1 Star<br>
 ʚɞ **Category:** Broken Access Control<br>
 ʚɞ **Target:** OWASP Juice Shop Score Board
-
 <br>
 
 ## ⑅ ‧₊˚ ↬ *The Process*
@@ -35,7 +32,6 @@ http://localhost:3000/#/score-board
 ```
 
 The application immediately routes us to the hidden component, solving the challenge and proving that hiding UI elements is not a valid access control mechanism.
-
 <br>
 
 ## ⑅ ‧₊˚ ↬ *Remediation*

@@ -1,7 +1,6 @@
-
 <div align="center">
 
-[← Back to summary](../README.md)
+[ 🏠 Home ](../README.md) ⋆ [ 🛡️ Findings ](README.md) ⋆ [ 🏆 Challenges ](../challenges-solved/README.md)
 
 </div>
 <br>
@@ -11,22 +10,36 @@
 ## ⑅ ‧₊˚ ↬ *Overview*
 ʚɞ **Severity:** Medium<br>
 ʚɞ **Endpoint:** API Endpoints<br>
-ʚɞ **Vulnerability Category:** Security Misconfiguration<br>
+ʚɞ **Category:** Security Misconfiguration
 
 <br>
 
-## ⑅ ‧₊˚ ↬ *Description*
-The application implements an overly permissive Cross-Origin Resource Sharing (CORS) policy. By allowing arbitrary origins to access application resources, attackers could potentially craft malicious pages that force authenticated users to execute unintended actions or leak sensitive data across domains.
+## ⑅ ‧₊˚ ↬ *Description & Exploitation*
+The application implements an overly permissive Cross-Origin Resource Sharing (CORS) policy. To test this, we intercept an API request using OWASP ZAP and manually inject an arbitrary `Origin` header to see how the server responds.
 
-<br>
+We modify the intercepted `GET` request like so:
 
-## ⑅ ‧₊˚ ↬ *Steps to Reproduce*
-⋈ 1. Intercept an API request using OWASP ZAP.<br>
-⋈ 2. Modify the request by adding an arbitrary `Origin` header.<br>
-⋈ 3. Forward the request to the server.<br>
-⋈ 4. Observe that the server responds with `Access-Control-Allow-Origin: *` or reflects the malicious origin.<br>
+```http
+GET /api/Users HTTP/1.1
+Host: localhost:3000
+Origin: [http://evil-attacker-site.com](http://evil-attacker-site.com)
+```
+
+Forwarding this to the server yields the following response:
+
+```http
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: application/json
+```
+
+By responding with the wildcard `*`, the server is explicitly telling the browser to allow any domain to read the responses from this API. This misconfiguration could allow an attacker to craft a malicious webpage that forces an authenticated user's browser to execute cross-domain requests and leak sensitive JSON data.
 
 <br>
 
 ## ⑅ ‧₊˚ ↬ *Remediation*
-Restrict the `Access-Control-Allow-Origin` header to explicit, trusted domains. Avoid using the wildcard or dynamically reflecting the user provided `Origin` header in authenticated API routes.
+Restrict the `Access-Control-Allow-Origin` header to explicit, trusted domains. Avoid using the wildcard `*` or dynamically reflecting the user provided `Origin` header in authenticated API routes.
+
+```http
+Access-Control-Allow-Origin: [https://trusted-frontend.com](https://trusted-frontend.com)
+```

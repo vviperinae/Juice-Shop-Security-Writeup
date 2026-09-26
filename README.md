@@ -1,20 +1,16 @@
 <div align="center">
+  <a href="./">🏠 Home</a> ⋆ <a href="findings/">🛡️ Findings</a> ⋆ <a href="challenges-solved/">🏆 Challenges</a>
+</div>
 
-[🏠 Home](README.md)
-⋆ [🛡️ Findings](findings/README.md) 
-⋆ [🏆 Challenges](challenges-solved/README.md)
+<div align="center">
+  
+<h1>୨୧ OWASP Juice Shop Security Assessment ୨୧</h1>
 
-<br>
-
-# ୨୧ OWASP Juice Shop Security Assessment ୨୧
-
-![OWASP ZAP](https://img.shields.io/badge/OWASP_ZAP-00549A?style=for-the-badge&logo=owasp&logoColor=white&color=DDA0DD)
-![Security](https://img.shields.io/badge/DAST_Assessment-FF3E00?style=for-the-badge&logo=shield&logoColor=white&color=FFB6C1)
-![Documentation](https://img.shields.io/badge/Vulnerability_Reports-000000?style=for-the-badge&logo=markdown&logoColor=white&color=DDA0DD)
-<br>
-
-*A structured dynamic application security assessment and remediation report.* ₊˚.༄
-
+  <img src="https://img.shields.io/badge/OWASP_ZAP-00549A?style=for-the-badge&logo=owasp&logoColor=white&color=DDA0DD">
+  <img src="https://img.shields.io/badge/DAST_Assessment-FF3E00?style=for-the-badge&logo=shield&logoColor=white&color=FFB6C1">
+  <img src="https://img.shields.io/badge/Vulnerability_Reports-000000?style=for-the-badge&logo=markdown&logoColor=white&color=DDA0DD"><br><br>
+  
+  <em>Application security findings, verification steps, and write-ups from testing OWASP Juice Shop. ₊˚.༄</em>
 </div>
 <br>
 
@@ -30,5 +26,5 @@ A comprehensive black-box Dynamic Application Security Testing (DAST) assessment
 <br>
 
 ## ⑅ ‧₊˚ ↬ *Explore the Assessment*
-⋈ **[ View Vulnerability Findings ➔ ](findings/README.md)** <br>
-⋈ **[ View Solved Challenges ➔ ](challenges-solved/README.md)**
+⋈ **<a href="findings/">View Vulnerability Findings ➔</a>**<br>
+⋈ **<a href="challenges-solved/">View Solved Challenges ➔</a>**

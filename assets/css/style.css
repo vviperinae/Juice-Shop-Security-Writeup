@@ -1,0 +1,54 @@
+---
+---
+@import "{{ site.theme }}";
+
+/* Custom Minimalist Palette: Pink, Purple, Gray, White, Black */
+
+body {
+  background-color: #FAFAFA; /* Crisp off-white background */
+  color: #24292E; /* Soft black for highly readable text */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Link Colors */
+a {
+  color: #DDA0DD; /* Purple for links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FFB6C1; /* Pink on hover */
+  text-decoration: underline;
+}
+
+/* Header Colors */
+h1, h2, h3, h4, h5, h6 {
+  color: #FFB6C1; /* Pink headers */
+  border-bottom: 1px solid #EAECEF; /* Light gray divider line */
+  padding-bottom: 0.3em;
+}
+
+/* Code Blocks and Inline Code */
+code, pre {
+  background-color: #F6F8FA; /* Light gray background for code */
+  color: #24292E;
+  border-radius: 6px;
+}
+
+/* Tables for structured data */
+table th {
+  background-color: #F6F8FA; /* Light gray table headers */
+  color: #24292E;
+}
+
+/* Custom wrapper to keep the content centered and structured */
+.wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #FFFFFF; /* Pure white content box */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Very subtle gray shadow */
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}

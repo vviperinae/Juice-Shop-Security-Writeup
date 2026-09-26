@@ -1,7 +1,5 @@
-<div align="center">
-
-[ 🏠 Home ](../README.md) ⋆ [ 🛡️ Findings ](README.md) ⋆ [ 🏆 Challenges ](../challenges-solved/README.md)
-
+<div align="left">
+  <a href="./">↤ Back to Findings</a>
 </div>
 <br>
 
@@ -11,7 +9,6 @@
 ʚɞ **Severity:** Medium<br>
 ʚɞ **Endpoint:** API Endpoints<br>
 ʚɞ **Category:** Security Misconfiguration
-
 <br>
 
 ## ⑅ ‧₊˚ ↬ *Description & Exploitation*
@@ -34,7 +31,6 @@ Content-Type: application/json
 ```
 
 By responding with the wildcard `*`, the server is explicitly telling the browser to allow any domain to read the responses from this API. This misconfiguration could allow an attacker to craft a malicious webpage that forces an authenticated user's browser to execute cross-domain requests and leak sensitive JSON data.
-
 <br>
 
 ## ⑅ ‧₊˚ ↬ *Remediation*

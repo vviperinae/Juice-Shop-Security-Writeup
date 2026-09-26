@@ -3,8 +3,8 @@
 /* Custom Clean Retro UI (Independent Dark Theme) */
 
 body {
-  background-color: #0d0f14; /* Deep, clean dark background */
-  color: #e5e7eb; /* High-contrast light gray text for perfect readability */
+  background-color: #0d0f14; 
+  color: #e5e7eb; 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
   margin: 0;
@@ -13,7 +13,7 @@ body {
 
 /* Sharp, blocky retro links */
 a {
-  color: #DDA0DD; /* Purple links */
+  color: #DDA0DD; 
   text-decoration: none;
   border-bottom: 1px solid #DDA0DD;
   transition: all 0.2s ease-in-out;
@@ -21,38 +21,47 @@ a {
 
 a:hover {
   background-color: #FFB6C1;
-  color: #0d0f14; /* Text turns dark when highlighted for readability */
+  color: #0d0f14; 
   border-bottom: 1px solid #FFB6C1;
 }
 
 /* Retro Terminal Headers */
 h1, h2, h3, h4 {
-  color: #FFB6C1; /* Pink headers */
+  color: #FFB6C1; 
   font-family: "Courier New", Consolas, monospace;
-  border-bottom: 2px solid #2d333b; /* Subtle structural divider */
+  border-bottom: 2px solid #2d333b; 
   padding-bottom: 8px;
   margin-top: 2em;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* Hard-edged Code Blocks with High Contrast */
-code, pre {
-  background-color: #161b22; /* Specific dark gray for code blocks */
-  color: #f0f6fc; /* Bright white/blue-ish text for high contrast code */
+/* Inline Code (e.g., `Origin`) */
+code {
+  background-color: #161b22; 
+  color: #FFB6C1; /* Pink text for all code */
   border: 1px solid #30363d;
-  border-radius: 0px; 
+  padding: 2px 6px; /* Keeps the neat box for inline words */
   font-family: "Courier New", Consolas, monospace;
   font-size: 0.9em;
 }
 
+/* Full Code Blocks */
 pre {
-  padding: 16px;
+  background-color: #161b22; 
+  border: 1px solid #30363d;
+  border-radius: 0px; 
+  padding: 12px; /* Tightened padding for the block */
   overflow-x: auto;
+  margin-top: 1em;
 }
 
-code {
-  padding: 2px 6px; /* Padding for inline code like `this` */
+/* Prevents double-padding and double-borders inside code blocks */
+pre code {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: #FFB6C1; /* Ensures block text is also pink */
 }
 
 /* Tables */
@@ -75,19 +84,19 @@ table th {
 
 /* The Central Window Wrapper */
 .wrapper {
-  max-width: 800px; /* Keeps line lengths readable */
-  margin: 60px auto; /* Centers the whole block horizontally */
-  padding: 40px;
-  background-color: #14171f; /* A shade lighter than the background */
+  max-width: 1100px; /* Widened significantly from 800px */
+  margin: 60px auto; 
+  padding: 50px 70px; /* Expanded inner padding for proportion */
+  background-color: #14171f; 
   border: 2px solid #30363d; 
   border-radius: 0px; 
-  box-shadow: 10px 10px 0px #050608; /* Retro hard shadow */
+  box-shadow: 10px 10px 0px #050608; 
 }
 
-/* Responsive design for mobile screens */
-@media (max-width: 850px) {
+/* Responsive design for smaller screens */
+@media (max-width: 1150px) {
   .wrapper {
     margin: 20px;
-    padding: 20px;
+    padding: 30px;
   }
 }
